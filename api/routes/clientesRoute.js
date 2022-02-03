@@ -6,7 +6,9 @@ const router = Router();
 
 router
   .get("/clientes", ClienteController.pegaTodosOsClientes)
-  .get("/clientes/:id", ClienteController.pegarUmCliente)
-  .post("/clientes", ClienteController.criarCliente);
+  .get("/clientes/:id", ClienteController.pegaUmCliente)
+  .post("/clientes", ClienteController.criaCliente)
+  .put("/clientes/:id", ClienteController.atualizaCliente)
+  .delete("/clientes/:id", ClienteController.apagaCliente);
 
 module.exports = router;
